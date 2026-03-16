@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #0038A8;
+  --color-secondary: #CE1126;
+  --color-accent: #FCD116;
+  --color-success: #008C45;
+  --color-background-sunset: #FF8243;
+  --color-charcoal: #36454F;
+  --color-cream: #FFFDD0;
+  --tracking-modern: -0.02em;
+}
+
+@layer base {
+  body {
+    @apply bg-background-sunset text-charcoal antialiased;
+  }
+}
+
+@layer utilities {
+  .glow-line {
+    box-shadow: 0 0 15px rgba(37, 226, 244, 0.4);
+  }
+
+  @keyframes capy-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+
+  @keyframes leg-swing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  .capy-body {
+    animation: capy-bob 0.8s ease-in-out infinite;
+  }
+
+  .capy-leg-1, .capy-leg-3 {
+    animation: leg-swing 0.8s ease-in-out infinite;
+  }
+
+  .capy-leg-2, .capy-leg-4 {
+    animation: leg-swing 0.8s ease-in-out infinite 0.4s;
+  }
+
+  @keyframes heartbeat-glow {
+    0%, 100% { 
+      box-shadow: 0 0 5px var(--glow-color, rgba(56, 189, 248, 0.1));
+      border-color: var(--glow-color, rgba(56, 189, 248, 0.1));
+    }
+    50% { 
+      box-shadow: 0 0 25px var(--glow-color-bright, rgba(56, 189, 248, 0.3));
+      border-color: var(--glow-color-bright, rgba(56, 189, 248, 0.4));
+    }
+  }
+
+  .heartbeat-sky {
+    --glow-color: rgba(56, 189, 248, 0.1);
+    --glow-color-bright: rgba(56, 189, 248, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .heartbeat-yellow {
+    --glow-color: rgba(250, 204, 21, 0.1);
+    --glow-color-bright: rgba(250, 204, 21, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .heartbeat-blue {
+    --glow-color: rgba(59, 130, 246, 0.1);
+    --glow-color-bright: rgba(59, 130, 246, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .heartbeat-green {
+    --glow-color: rgba(34, 197, 94, 0.1);
+    --glow-color-bright: rgba(34, 197, 94, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .heartbeat-orange {
+    --glow-color: rgba(249, 115, 22, 0.1);
+    --glow-color-bright: rgba(249, 115, 22, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .heartbeat-purple {
+    --glow-color: rgba(168, 85, 247, 0.1);
+    --glow-color-bright: rgba(168, 85, 247, 0.4);
+    animation: heartbeat-glow 2s ease-in-out infinite;
+  }
+
+  .neon-red:hover {
+    text-shadow: 0 0 8px rgba(206, 11, 38, 0.8), 0 0 20px rgba(206, 11, 38, 0.4);
+    color: #CE1126 !important;
+  }
+
+  .neon-blue:hover {
+    text-shadow: 0 0 8px rgba(0, 56, 168, 0.8), 0 0 20px rgba(0, 56, 168, 0.4);
+    color: #0038A8 !important;
+  }
+
+  .neon-yellow:hover {
+    text-shadow: 0 0 8px rgba(252, 209, 22, 0.8), 0 0 20px rgba(252, 209, 22, 0.4);
+    color: #FCD116 !important;
+  }
+
+  .neon-green:hover {
+    text-shadow: 0 0 8px rgba(0, 140, 69, 0.8), 0 0 20px rgba(0, 140, 69, 0.4);
+    color: #008C45 !important;
+  }
+
+  @keyframes charcoal-glow {
+    0%, 100% { 
+      filter: drop-shadow(0 0 30px rgba(54, 69, 79, 0.8)) drop-shadow(0 0 60px rgba(54, 69, 79, 0.4));
+    }
+    50% { 
+      filter: drop-shadow(0 0 60px rgba(54, 69, 79, 1)) drop-shadow(0 0 120px rgba(54, 69, 79, 0.7));
+    }
+  }
+
+  .charcoal-aura {
+    animation: charcoal-glow 4s ease-in-out infinite;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
