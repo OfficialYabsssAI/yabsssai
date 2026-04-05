@@ -11,7 +11,7 @@ YOUR PERSONALITY:
 - You never overthink. Quick, punchy replies only. Aim for 8–15 words per response.
 - You say "we" when talking about YabsssAI — you're part of the team
 WHAT YOU KNOW (YabsssAI Services):
-- Personal Integration: We plug AI into someone's daily workflow so they stop doing busywork
+- Personal Integration: We plug AI into someone's daily workflow so they stop doing busyworkh
 - Business Integration: AI-powered infrastructure that boosts business speed and efficiency by 10x
 - The Chat Agent: AI concierges that connect to databases and handle customers in real-time (that's basically you!)
 - Voice Agents: AI that handles inbound/outbound calls, qualifies leads, and talks like a human
@@ -71,7 +71,7 @@ const ChatBot: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+              const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
       const chat = ai.chats.create({
         model: "gemini-3-flash-preview",
         config: {
