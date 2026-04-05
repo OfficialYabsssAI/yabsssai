@@ -12,11 +12,18 @@
   --color-charcoal: #36454F;
   --color-cream: #FFFDD0;
   --tracking-modern: -0.02em;
+      --color-navy: #0a0f1e;
+      --color-navy-light: #111827;
+      --color-navy-dark: #060d1a;
+      --color-navy-card: #0d1525;
+      --color-text-accent: #FCD116;
+      --color-text-cream: #FFFDD0;
+      --color-heartbeat-cyan: #25E2F4;
 }
 
 @layer base {
   body {
-    @apply bg-background-sunset text-charcoal antialiased;
+            @apply bg-navy text-cream antialiased;
   }
 }
 
